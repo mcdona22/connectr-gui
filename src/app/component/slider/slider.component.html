@@ -1,0 +1,25 @@
+<app-subtitle title={{title}}></app-subtitle>
+
+
+
+<div class="row wow fadeIn" data-wow-delay="0.2s">
+  <div class="col-lg-7">
+    <div class="view overlay hm-white-light z-depth-1-half">
+      <img class="img-fluid" src={{imgsrc}} alt="">
+      <div class="mask">
+      </div>
+    </div>
+    <br>
+  </div>
+
+  <div class="col-sm-5">
+    <h2 class="h2-responsive">{{subtitle}}</h2>
+    <!--<p ng-bind-html = "{{textcontent}}"></p>-->
+    <!--{{textcontent}}-->
+    <p [innerHTML]="textcontent"></p>
+
+
+    <a class="btn btn-primary" href="">Learn More</a>
+
+  </div>
+</div>
