@@ -8,6 +8,7 @@ import { SubtitleComponent } from './component/subtitle/subtitle.component';
 import { WelcomePageComponent } from './component/welcome-page/welcome-page.component';
 import { AboutPageComponent } from './component/about-page/about-page.component';
 import {AppRoutingModule} from './module/app-routing/app-routing.module';
+import { TagcloudViewComponent } from './component/tagcloud-view/tagcloud-view.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {AppRoutingModule} from './module/app-routing/app-routing.module';
     SliderComponent,
     SubtitleComponent,
     WelcomePageComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    TagcloudViewComponent
   ],
   imports: [
     BrowserModule
