@@ -1,3 +1,33 @@
-<p>
-  tagcloud-view works!
-</p>
+<main>
+
+<div class="container">
+
+  <div class="row wow fadeIn" data-wow-delay="0.2s">
+
+    <div class="col-lg-12">
+      <div class="view overlay hm-white-light z-depth-1-half">
+        <app-subtitle title="Technology"></app-subtitle>
+
+        <angular-tag-cloud
+          [data]="data"
+          [width]="options.width"
+          [height]="options.height"
+          [overflow]="options.overflow">
+
+        </angular-tag-cloud>
+      </div>
+    </div>
+  </div>
+  <div class="row wow fadeIn" data-wow-delay="0.2s">
+
+    <div class="col-lg-12">
+      <div class="view overlay hm-white-light z-depth-1-half">
+
+        <app-subtitle title="Same Stuff in a table"></app-subtitle>
+        yay
+      </div>
+    </div>
+  </div>
+
+</div>
+</main>

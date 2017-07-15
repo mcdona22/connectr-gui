@@ -9,6 +9,7 @@ import { WelcomePageComponent } from './component/welcome-page/welcome-page.comp
 import { AboutPageComponent } from './component/about-page/about-page.component';
 import {AppRoutingModule} from './module/app-routing/app-routing.module';
 import { TagcloudViewComponent } from './component/tagcloud-view/tagcloud-view.component';
+import {TagCloudModule} from 'angular-tag-cloud-module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { TagcloudViewComponent } from './component/tagcloud-view/tagcloud-view.c
   imports: [
     BrowserModule
     , AppRoutingModule
+    , TagCloudModule
   ],
   providers: [],
   bootstrap: [AppComponent]
