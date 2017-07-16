@@ -19,7 +19,7 @@ export class TagcloudViewComponent implements OnInit {
   constructor(private personService: PersonService) { }
 
   ngOnInit() {
-    this.data = this.personService.getPeople();
+    this.personService.getPeople().then( data => this.data = data);
   }
 
 }
