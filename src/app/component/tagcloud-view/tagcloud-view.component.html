@@ -6,7 +6,7 @@
 
     <div class="col-lg-12">
       <div class="view overlay hm-white-light z-depth-1-half">
-        <app-subtitle title="Technology"></app-subtitle>
+        <app-subtitle title="Technology Cloud"></app-subtitle>
 
         <angular-tag-cloud
           [data]="data"
@@ -18,13 +18,26 @@
       </div>
     </div>
   </div>
+
+
   <div class="row wow fadeIn" data-wow-delay="0.2s">
 
     <div class="col-lg-12">
       <div class="view overlay hm-white-light z-depth-1-half">
 
-        <app-subtitle title="Same Stuff in a table"></app-subtitle>
-        yay
+        <app-subtitle title="Technology Tabulation"></app-subtitle>
+        <table class="table-striped  table-bordered table-hover table">
+          <thead>
+            <tr> <th>Item</th> <th>Weight</th> </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = "let item of data">
+              <td>{{item.text}}</td>
+              <td>{{item.weight}}</td>
+            </tr>
+           </tbody>
+        </table>
+
       </div>
     </div>
   </div>
