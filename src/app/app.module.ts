@@ -1,5 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule} from '@angular/http';
+// import {HttpClientModule} from '@angular/common/http';
+
+import {TagCloudModule} from 'angular-tag-cloud-module';
+import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
@@ -9,7 +15,7 @@ import { WelcomePageComponent } from './component/welcome-page/welcome-page.comp
 import { AboutPageComponent } from './component/about-page/about-page.component';
 import {AppRoutingModule} from './module/app-routing/app-routing.module';
 import { TagcloudViewComponent } from './component/tagcloud-view/tagcloud-view.component';
-import {TagCloudModule} from 'angular-tag-cloud-module';
+import {InMemoryDataService } from './service/in-memory-data-service';
 
 @NgModule({
   declarations: [
@@ -25,6 +31,10 @@ import {TagCloudModule} from 'angular-tag-cloud-module';
     BrowserModule
     , AppRoutingModule
     , TagCloudModule
+    , HttpModule
+    // , HttpClientModule
+    , InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 1500 })
+
   ],
   providers: [],
   bootstrap: [AppComponent]
