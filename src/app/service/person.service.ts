@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
 import {CloudData} from 'angular-tag-cloud-module';
+import { Headers, Http } from '@angular/http';
+import 'rxjs/add/operator/toPromise';
+import {HttpClient} from "selenium-webdriver/http";
+
 
 
 export const DATA: Array<CloudData> = [
@@ -21,14 +25,22 @@ export const DATA: Array<CloudData> = [
 
 @Injectable()
 export class PersonService {
+  private dataUrl = '/api/tech';
 
-
-  constructor() { }
+  constructor(private http: Http) { }
 
   getPeople(): Promise <CloudData[]> {
-    return Promise.resolve(DATA);
+    return this.http.get(this.dataUrl)
+      .toPromise()
+      .then(
+        response => response.json().data as CloudData[])
+      .catch(this.handleError);
+    // return Promise.resolve(DATA);
   }
 
-
+  private handleError(error: any): Promise<any> {
+    console.error('WTF - error occurred', error); // for demo purposes only
+    return Promise.reject(error.message || error);
+  }
 
 }
